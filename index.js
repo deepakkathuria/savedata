@@ -10,7 +10,7 @@ const app = express();
 // Define a route to handle GET requests at the "/todos" path
 
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 // Define the Mongoose schemas for nested objects
 const venueSchema = new mongoose.Schema({
@@ -104,7 +104,7 @@ const matchSchema = new mongoose.Schema({
 });
 
 
-const port = 4000
+const port = 3000
 
 // Connect to your MongoDB database
 mongoose.connect(
