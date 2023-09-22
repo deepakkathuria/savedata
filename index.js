@@ -1,3 +1,4 @@
+// require('dotenv').config();
 const http = require("http");
 const axios = require("axios");
 const mongoose = require("mongoose");
@@ -11,6 +12,8 @@ const app = express();
 
 
 const PORT = process.env.PORT || 3000;
+
+
 
 // Define the Mongoose schemas for nested objects
 const venueSchema = new mongoose.Schema({
@@ -104,7 +107,6 @@ const matchSchema = new mongoose.Schema({
 });
 
 
-const port = 3000
 
 // Connect to your MongoDB database
 mongoose.connect(
@@ -230,8 +232,8 @@ setInterval(fetchDataAndSave, 10000);
 // });
 
 
-app.listen(port, () => {
-  console.log(`Server listening on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server listening on http://localhost:${PORT}`);
 });
 
 // app.get('/list1', async (req, res) => {
