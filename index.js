@@ -425,12 +425,17 @@
 // index.js
 const express = require('express');
 const mongoose = require('mongoose');
-const port = 3000;
+// const port = 3000;
+
 var cron = require("node-cron");
 const axios = require("axios");
 const cors = require('cors');
 
 const app = express();
+
+
+const PORT = process.env.PORT || 4000;
+
 
 // This will allow all origins. In production, you might want to restrict this.
 app.use(cors());
@@ -1075,8 +1080,8 @@ async function fetchAndUpdateAllMatches() {
 
 
 // Start the server
-app.listen(port, () => {
-  console.log(`Server listening on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server listening on http://localhost:${PORT}`);
 });
 
 
